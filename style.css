@@ -1,13 +1,16 @@
 body{
 
-  background-image: url(Gif3.1.gif);
+  background-image: url(path.jpg);
   background-size: auto 100vh;
+  animation: bgMoving 7s linear infinite;
+  background-size: cover;
+  min-height: 100vh;
 }
 .character{
   width: 150px;
   height: 150px;
   position:absolute;
-  bottom: 20%;
+  bottom: 5%;
   left: 10%;
   background-image: url('pollo3.png');
   background-size: cover;
@@ -20,10 +23,18 @@ body{
 
 @keyframes  jump {
     50%{
-      bottom: 60%;
+      bottom: 45%;
     }
     100%{
       bottom: 20%;
       transform: rotate(360deg);
     }
+}
+@keyframes bgMoving{
+  0%{
+    background-position: 100vw;
+  }
+  100%{
+    background-position: -100vw;
+  }
 }
