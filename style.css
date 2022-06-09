@@ -18,23 +18,72 @@ body{
 
 .jump{
   animation: jump 1000ms forwards;
-}
+  }
+ .go-right{
+    animation: goRight 1000ms forwards;
+  }
 
 
-@keyframes  jump {
-    50%{
-      bottom: 45%;
-    }
-    100%{
-      bottom: 20%;
-      transform: rotate(360deg);
-    }
-}
-@keyframes bgMoving{
-  0%{
-    background-position: 100vw;
+@keyframes  goRight {
+  50%{
+    left: 60%;
   }
   100%{
-    background-position: -100vw;
+    /* bottom: 20%; */
+    transform: rotate(-360deg);
   }
 }
+
+@keyframes  jump {
+  50%{
+    bottom: 45%;
+  }
+  100%{
+    bottom: 20%;
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@keyframes bgMoving{
+0%{
+  background-position: 100vw;
+}
+100%{
+  background-position: -100vw;
+}
+}
+
+.enemy{
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  background-image: url(chef.png);
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px green;
+  animation: enemyAnim 4s linear infinite;
+}
+
+@keyframes enemyAnim {
+  25%{
+    width: 200px;
+  }
+  50%{
+    top: 50%;
+    opacity: .5;
+    width: 100px;
+  }
+  75%{
+    width: 300px;
+    transform:rotate(90deg);
+  }
+  100%{
+    left: -20%;
+  }
+}
+
+
