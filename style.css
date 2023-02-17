@@ -1,5 +1,5 @@
 body{
-
+  
   background-image: url(path.jpg);
   background-size: auto 100vh;
   animation: bgMoving 7s linear infinite;
